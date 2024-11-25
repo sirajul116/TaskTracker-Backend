@@ -20,12 +20,13 @@ public class TaskService {
 
     }
 
-//    public List<Task> getTasksByCategory(String category) {
-//        return taskRepository.findByCategory(category);
-//    }
+    public List<Task> getTasksByCategory(String category) {
+        return taskRepository.findByCategory(category);
+    }
 
-    public Task getTaskById(Long task_id){
-        return taskRepository.findById(task_id).get();
+    public Task getTaskById(Long taskId) {
+        return taskRepository.findById(taskId)
+                .orElseThrow(() -> new IllegalArgumentException("Task not found with ID: " + taskId));
     }
 
     public Task addTask(Task task){

@@ -23,10 +23,10 @@ public class TaskController {
     public ResponseEntity<Task> getTaskById(@PathVariable("task_id") Long task_id){
         return ResponseEntity.ok(taskService.getTaskById(task_id));
     }
-//    @GetMapping("/tasks/{category}")
-//    public ResponseEntity<List<Task>> getTasksByCategory(@PathVariable("category") String category) {
-//        return ResponseEntity.ok(taskService.getTasksByCategory(category));
-//    }
+    @GetMapping("/tasks/category/{category}")
+    public ResponseEntity<List<Task>> getTasksByCategory(@PathVariable("category") String category) {
+        return ResponseEntity.ok(taskService.getTasksByCategory(category));
+    }
     @PostMapping("/tasks")
     public ResponseEntity<Task> createTask (@RequestBody Task task){
         return ResponseEntity.ok(taskService.addTask(task));
