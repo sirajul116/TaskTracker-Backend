@@ -38,7 +38,7 @@ public class TaskController {
             taskObj.setCategory(task.getCategory());
             taskObj.setDetails(task.getDetails());
             taskObj.setStatus(task.getStatus());
-            task.setPersistence(task.getPersistence());
+            taskObj.setPersistence(task.getPersistence());
         }
         return ResponseEntity.ok(taskService.updateTask(taskObj));
     }
