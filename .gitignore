@@ -1,37 +1,41 @@
-# Ignore Maven target directory
-/target/
+HELP.md
+target/
+.mvn/wrapper/*.*
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Ignore IntelliJ IDEA specific files
-/.idea/
-/*.iml
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# Ignore Eclipse specific files
-/.classpath
-/.project
-/.settings/
-
-# Ignore temporary files and OS-specific files
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 *.log
 *.tmp
-*.swp
-*.DS_Store
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# OS-specific files
+.DS_Store
 Thumbs.db
 
-# Ignore Maven wrapper files
-.mvn/wrapper/maven-wrapper.jar
-
-# Ignore build artifacts
-*.war
-*.jar
-
-# Ignore local environment configuration
-application.properties
-application.yml
-.env
-
-# Ignore logs
-logs/
-*.log
-
-# Ignore test reports
-/test-output/
